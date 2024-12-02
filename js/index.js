@@ -20,7 +20,7 @@ function reload() {
 
 function playAnotherGame() {
     do {
-        gameSession = prompt("Would you like to play another game? y/n");
+        gameSession = prompt(`${userName}, Would you like to play another game? y/n`);
     } while (gameSession.toLowerCase() == "y" ? true : false);
 
     if (gameSession === "n") {
@@ -58,7 +58,7 @@ function guessingGame() {
             guessCount++;
         }
         alert("You guessed it in " + guessCount + " guesses");
-        playSession = prompt("Would you like to keep playing this game? y/n");
+        playSession = prompt(`${userName}, Would you like to keep playing this game? y/n`);
         if (playSession === null) {
             break outer;
         }
@@ -110,7 +110,7 @@ let consultOracle = function () {
             }
 
             if (userAction == "stop") {
-                playSession = prompt("Would you like to keep playing this game? y/n");
+                playSession = prompt(`${userName}, Would you like to keep playing this game? y/n`);
                 if (playSession === "y") {
                     continue outer;
                 } else {
@@ -130,7 +130,7 @@ let bnh = () => {
     let playSession = "y";
     const choices = ['bear', 'ninja', 'hunter'];
 
-    let player = `${userName}`;
+    let player = userName;
     // Print out welcome text
     welcomeToGame("Bear, Ninja, Hunter", player);
 
@@ -190,7 +190,7 @@ let bnh = () => {
 
 
                 setTimeout(function () {
-                    playSession = prompt("Would you like to keep playing this game? y/n");
+                    playSession = prompt(`${userName}, Would you like to keep playing this game? y/n`);
                     if (playSession.toLowerCase() == "y") {
                         playGame();
                     } else {
