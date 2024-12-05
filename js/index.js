@@ -21,6 +21,9 @@ function reload() {
 function playAnotherGame() {
     do {
         gameSession = prompt(`${userName}, Would you like to play another game? y/n`);
+        if (gameSession.toLowerCase() == "y") {
+            break;
+        }
     } while (gameSession.toLowerCase() == "y" ? true : false);
 
     if (gameSession === "n") {
